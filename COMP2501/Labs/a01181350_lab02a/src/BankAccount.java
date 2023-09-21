@@ -19,12 +19,23 @@ public class BankAccount {
 	public int getAccountNumber() {
 		return accountNumber;
 	}
-
+	
 	public float getBalanceCdn() {
 		return balanceCdn;
 	}
 
-//this is a test on git push
+	public void setMemberLastName(String memberLastName) {
+		this.memberLastName = memberLastName;
+	}
+
+	public void setAccountNumber(int accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public void setBalanceCdn(float balanceCdn) {
+		this.balanceCdn = balanceCdn;
+	}
+
 
 
 	public static void main(String[] args) {
