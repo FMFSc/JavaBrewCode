@@ -36,6 +36,7 @@ public class BankAccount {
 		this.balanceCdn = balanceCdn;
 	}
 
+	//withdraw method 
 	public void withdraw(double amountCdn) {
 		if (amountCdn <= 0) {
 			System.out.println("Withdraw amounts should be positive.");
@@ -46,6 +47,16 @@ public class BankAccount {
 		System.out.println("Insuficient funds.");
 	}
 
+	//deposit method
+	public void deposit(double amountCdn) {
+		if (amountCdn <= 0) {
+			System.out.println("Deposit should be greater than zero.");
+		}
+		else {
+			balanceCdn += amountCdn;
+		}
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
