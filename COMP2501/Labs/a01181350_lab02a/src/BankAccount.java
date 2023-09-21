@@ -1,5 +1,3 @@
-//Fellipe Matheus Fumagali Scirea - A01181350
-package a01181350_lab02a;
 
 public class BankAccount {
 
