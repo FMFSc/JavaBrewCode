@@ -57,6 +57,13 @@ public class BankAccount {
 		}
 	}
 	
+	public void transfer(double amountCdn, BankAccount depositantAccount, BankAccount recipientAccount) {
+		if(amountCdn >= BankAccount.depositantAccount) {
+			
+		}
+		
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
