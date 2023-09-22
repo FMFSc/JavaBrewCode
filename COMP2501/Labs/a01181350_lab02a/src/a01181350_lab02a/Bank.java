@@ -45,8 +45,38 @@ public class Bank {
 		return accounts.get(accountNumber);
 	}
 	
+	public void removeAccount(String accountNumber) {
+		accounts.remove(accountNumber);
+	}
 	
+	public int getNumberOfAccounts() {
+		return accounts.size();
+	}
 	
+	public double getTotalAccountsBalance() {
+		double totalCdn = 0.0;
+		for(BankAccount account : accounts.values()) {
+			totalCdn += account.getBalanceCdn();
+		}
+		return totalCdn;
+	}
+	
+	public void depositTo(double amountCdn, String accountNumber) {
+		BankAccount account = accounts.get(accountNumber);
+		if (account != null) {
+			account.deposit(amountCdn);
+		}
+	}
+	
+	public void printAllCustomerData() {
+		for(BankAccount account:accounts.values()) {
+			System.out.printf("Customer %s has CA$%.2f in their account #%s#n",
+					account.getMemberLastName().substring(0,1).toUpperCase() + account.getMemberLastName().substring(1),
+					account.getBalanceCdn(),
+					account.getAccountNumber());
+		}
+		System.out.printf("Total bank balance in all accounts for %s is %.2f%n", this.bankName, getTotalAccountsBalance());
+	}
 	
 	
 	
