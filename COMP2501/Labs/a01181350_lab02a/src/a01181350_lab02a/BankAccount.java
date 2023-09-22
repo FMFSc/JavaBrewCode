@@ -1,11 +1,12 @@
 //Fellipe Matheus Fumagali Scirea - S.N. #A01181350
+package a01181350_lab02a;
 
 public class BankAccount {
 	private String memberLastName;
-	private int accountNumber;
+	private String accountNumber;
 	private double balanceCdn;
 	
-	public BankAccount(String memberLastName, int accountNumber, double balanceCdn) {
+	public BankAccount(String memberLastName, String accountNumber, double balanceCdn) {
 		super();
 		this.memberLastName = memberLastName;
 		this.accountNumber = accountNumber;
@@ -16,7 +17,7 @@ public class BankAccount {
 		return memberLastName;
 	}
 
-	public int getAccountNumber() {
+	public String getAccountNumber() {
 		return accountNumber;
 	}
 	
@@ -28,7 +29,7 @@ public class BankAccount {
 		this.memberLastName = memberLastName;
 	}
 
-	public void setAccountNumber(int accountNumber) {
+	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = accountNumber;
 	}
 
