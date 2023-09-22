@@ -3,9 +3,9 @@
 public class BankAccount {
 	private String memberLastName;
 	private int accountNumber;
-	private float balanceCdn;
+	private double balanceCdn;
 	
-	public BankAccount(String memberLastName, int accountNumber, float balanceCdn) {
+	public BankAccount(String memberLastName, int accountNumber, double balanceCdn) {
 		super();
 		this.memberLastName = memberLastName;
 		this.accountNumber = accountNumber;
@@ -20,7 +20,7 @@ public class BankAccount {
 		return accountNumber;
 	}
 	
-	public float getBalanceCdn() {
+	public double getBalanceCdn() {
 		return balanceCdn;
 	}
 
@@ -32,7 +32,7 @@ public class BankAccount {
 		this.accountNumber = accountNumber;
 	}
 
-	public void setBalanceCdn(float balanceCdn) {
+	public void setBalanceCdn(double balanceCdn) {
 		this.balanceCdn = balanceCdn;
 	}
 
@@ -57,12 +57,15 @@ public class BankAccount {
 		}
 	}
 	
-	public void transfer(double amountCdn, BankAccount depositantAccount, BankAccount recipientAccount) {
-		if(amountCdn >= BankAccount.depositantAccount) {
-			
+	public void transfer(double amountCdn, BankAccount recipientAccount) {
+		if(amountCdn >= balanceCdn){
+			recipientAccount.deposit(amountCdn);
+			withdraw(amountCdn);		
 		}
-		
+		System.out.println("Insuficient funds.");
 	}
+	
+	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
